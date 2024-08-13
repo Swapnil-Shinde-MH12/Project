@@ -1,0 +1,5 @@
+Info: Results will be stored at '/home/user13/swapnil/OpenMpi/Project/openaccAdvisor/e000/pp000/data.0'. See interactive HTML report in '/home/user13/swapnil/OpenMpi/Project/openaccAdvisor/e000/report'
+Info: Selected accelerator to analyze: Intel(R) XeLP Graphics Accelerator 96EU.
+Info: Baseline Host: Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz.
+Info: Binary Name: 'openacc_monte_carlo_barrier_option'.
+Warning: Skip the unsupported instruction. Performance estimation may be inaccurate.

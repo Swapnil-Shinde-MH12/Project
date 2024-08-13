@@ -1,0 +1,12 @@
+-r
+/home/user13/swapnil/OpenMpi/Project/openaccAdvisor/e000/pp000
+-quiet
+--accelerator=gen
+--config=gen12_tgl
+--assume-ndim-dependency
+--no-assume-dependencies
+--check-profitability
+--loop-filter-threshold=0.02
+--small-node-filter=0
+--count-send-latency=all
+--cpu-scale-factor=1

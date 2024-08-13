@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<!DOCTYPE HPCToolkitStructure [
+<!-- ******************************************************************** -->
+<!-- HPCToolkit Structure DTD                                             -->
+<!-- Version 4.7                                                          -->
+<!-- ******************************************************************** -->
+
+<!ELEMENT HPCToolkitStructure (LM)*>
+<!ATTLIST HPCToolkitStructure
+	version CDATA #REQUIRED
+	i       CDATA #REQUIRED
+	n       CDATA #IMPLIED>
+  <!-- Load module: -->
+  <!--   (i)d: unique identifier for cross referencing -->
+  <!--   (n)ame -->
+  <!--   (l)ine range: "beg-end" (inclusive range) -->
+  <!--   (v)ma-range-set: "{[beg-end), [beg-end)...}" -->
+  <!--   (t)arget: target function address -->
+  <!--   (d)evice: device name -->
+  <!ELEMENT LM (F|P)*>
+  <!ATTLIST LM
+	i CDATA #REQUIRED
+	n CDATA #REQUIRED
+	v CDATA #IMPLIED>
+  <!-- File: -->
+  <!ELEMENT F (P|L|S)*>
+  <!ATTLIST F
+	i CDATA #REQUIRED
+	n CDATA #REQUIRED>
+  <!-- Procedure: ln=link name (if different than name) -->
+  <!ELEMENT P (P|A|L|S|C)*>
+  <!ATTLIST P
+	i  CDATA #REQUIRED
+	n  CDATA #REQUIRED
+	ln CDATA #IMPLIED
+	l  CDATA #IMPLIED
+	s  CDATA #IMPLIED
+	v  CDATA #IMPLIED>
+  <!-- Alien: (f)ilename -->
+  <!ELEMENT A (A|L|S|C)*>
+  <!ATTLIST A
+	i CDATA #REQUIRED
+	f CDATA #IMPLIED
+	n CDATA #IMPLIED
+	ln CDATA #IMPLIED
+	l CDATA #IMPLIED
+	v CDATA #IMPLIED>
+  <!-- Loop -->
+  <!ELEMENT L (A|L|S|C)*>
+  <!ATTLIST L
+	i CDATA #REQUIRED
+	l CDATA #REQUIRED
+	f CDATA #IMPLIED
+	v CDATA #IMPLIED>
+  <!-- Statement -->
+  <!ELEMENT S EMPTY>
+  <!ATTLIST S
+	i CDATA #REQUIRED
+	l CDATA #REQUIRED
+	v CDATA #IMPLIED>
+  <!-- Callsite (a special Statement) -->
+  <!ELEMENT C (C)*>
+  <!ATTLIST C
+	i CDATA #REQUIRED
+	l CDATA #REQUIRED
+	v CDATA #IMPLIED
+	t CDATA #IMPLIED
+	d CDATA #IMPLIED>
+]>
+<HPCToolkitStructure i="0" version="4.7" n="">
+<LM i="2" n="/home/user13/swapnil/OpenMpi/Project/openacc_monte_carlo_barrier_option" v="{}">
+  <F i="3" n="[openacc_monte_carlo_barrier_option]">
+    <P i="4" n="_init" l="0" v="{[0x400738-0x400739)}">
+      <S i="5" l="0" v="{[0x400738-0x400748) [0x40074d-0x400752)}"/>
+      <C i="6" l="0" v="{[0x400748-0x40074d)}" t="0x400810" d=""/>
+    </P>
+    <P i="7" n="fmax@plt" l="0" v="{[0x400770-0x400771)}">
+      <S i="8" l="0" v="{[0x400770-0x400780)}"/>
+    </P>
+    <P i="9" n="exp@plt" l="0" v="{[0x400780-0x400781)}">
+      <S i="10" l="0" v="{[0x400780-0x400790)}"/>
+    </P>
+    <P i="11" n="clock@plt" l="0" v="{[0x400790-0x400791)}">
+      <S i="12" l="0" v="{[0x400790-0x4007a0)}"/>
+    </P>
+    <P i="13" n="GOACC_data_start@plt" l="0" v="{[0x4007a0-0x4007a1)}">
+      <S i="14" l="0" v="{[0x4007a0-0x4007b0)}"/>
+    </P>
+    <P i="15" n="GOACC_data_end@plt" l="0" v="{[0x4007b0-0x4007b1)}">
+      <S i="16" l="0" v="{[0x4007b0-0x4007c0)}"/>
+    </P>
+    <P i="17" n="printf@plt" l="0" v="{[0x4007c0-0x4007c1)}">
+      <S i="18" l="0" v="{[0x4007c0-0x4007d0)}"/>
+    </P>
+    <P i="19" n="GOACC_parallel_keyed@plt" l="0" v="{[0x4007d0-0x4007d1)}">
+      <S i="20" l="0" v="{[0x4007d0-0x4007e0)}"/>
+    </P>
+    <P i="21" n="log@plt" l="0" v="{[0x4007e0-0x4007e1)}">
+      <S i="22" l="0" v="{[0x4007e0-0x4007f0)}"/>
+    </P>
+    <P i="23" n="cos@plt" l="0" v="{[0x4007f0-0x4007f1)}">
+      <S i="24" l="0" v="{[0x4007f0-0x400800)}"/>
+    </P>
+    <P i="25" n="__libc_start_main@plt" l="0" v="{[0x400800-0x400801)}">
+      <S i="26" l="0" v="{[0x400800-0x400810)}"/>
+    </P>
+    <P i="27" n="__gmon_start__@plt" l="0" v="{[0x400810-0x400811)}">
+      <S i="28" l="0" v="{[0x400810-0x400820)}"/>
+    </P>
+    <P i="29" n="sqrt@plt" l="0" v="{[0x400820-0x400821)}">
+      <S i="30" l="0" v="{[0x400820-0x400830)}"/>
+    </P>
+    <P i="31" n="rand@plt" l="0" v="{[0x400830-0x400831)}">
+      <S i="32" l="0" v="{[0x400830-0x400840)}"/>
+    </P>
+    <P i="33" n="_start" l="0" v="{[0x400840-0x400841)}">
+      <S i="34" l="0" v="{[0x400840-0x400864) [0x400869-0x400870)}"/>
+      <C i="35" l="0" v="{[0x400864-0x400869)}" t="0x400800" d=""/>
+    </P>
+    <P i="36" n="deregister_tm_clones" l="0" v="{[0x400870-0x400871)}">
+      <S i="37" l="0" v="{[0x400870-0x4008a0)}"/>
+    </P>
+    <P i="38" n="register_tm_clones" l="0" v="{[0x4008a0-0x4008a1)}">
+      <S i="39" l="0" v="{[0x4008a0-0x4008e0)}"/>
+    </P>
+    <P i="40" n="__do_global_dtors_aux" l="0" v="{[0x4008e0-0x4008e1)}">
+      <S i="41" l="0" v="{[0x4008e0-0x4008ed) [0x4008f2-0x400910)}"/>
+      <C i="42" l="0" v="{[0x4008ed-0x4008f2)}" t="0x400870" d=""/>
+    </P>
+    <P i="43" n="frame_dummy" l="0" v="{[0x400910-0x400911)}">
+      <S i="44" l="0" v="{[0x400910-0x400912)}"/>
+    </P>
+    <P i="45" n="rand_gaussian" l="0" v="{[0x400912-0x400913)}">
+      <S i="46" l="0" v="{[0x400912-0x40091a) [0x40091f-0x400938) [0x40093d-0x40095f) [0x400964-0x40097a) [0x40097f-0x40099f) [0x4009a4-0x4009b5)}"/>
+      <C i="47" l="0" v="{[0x40091a-0x40091f)}" t="0x400830" d=""/>
+      <C i="48" l="0" v="{[0x400938-0x40093d)}" t="0x400830" d=""/>
+      <C i="49" l="0" v="{[0x40095f-0x400964)}" t="0x4007e0" d=""/>
+      <C i="50" l="0" v="{[0x40097a-0x40097f)}" t="0x400820" d=""/>
+      <C i="51" l="0" v="{[0x40099f-0x4009a4)}" t="0x4007f0" d=""/>
+    </P>
+    <P i="52" n="monte_carlo_barrier_option" l="0" v="{[0x4009b5-0x4009b6)}">
+      <S i="53" l="0" v="{[0x4009b5-0x400a8e) [0x400a93-0x400b57) [0x400b5c-0x400b60) [0x400b65-0x400b8f) [0x400b94-0x400bbc)}"/>
+      <C i="54" l="0" v="{[0x400a8e-0x400a93)}" t="0x4007a0" d=""/>
+      <C i="55" l="0" v="{[0x400b57-0x400b5c)}" t="0x4007d0" d=""/>
+      <C i="56" l="0" v="{[0x400b60-0x400b65)}" t="0x4007b0" d=""/>
+      <C i="57" l="0" v="{[0x400b8f-0x400b94)}" t="0x400780" d=""/>
+    </P>
+    <P i="58" n="main" l="0" v="{[0x400bbc-0x400bbd)}">
+      <S i="59" l="0" v="{[0x400bbc-0x400c12) [0x400c17-0x400c5b) [0x400c60-0x400c69) [0x400c6e-0x400cb7) [0x400cbc-0x400ccf) [0x400cd4-0x400cdb)}"/>
+      <C i="60" l="0" v="{[0x400c12-0x400c17)}" t="0x400790" d=""/>
+      <C i="61" l="0" v="{[0x400c5b-0x400c60)}" t="0x4009b5" d=""/>
+      <C i="62" l="0" v="{[0x400c69-0x400c6e)}" t="0x400790" d=""/>
+      <C i="63" l="0" v="{[0x400cb7-0x400cbc)}" t="0x4007c0" d=""/>
+      <C i="64" l="0" v="{[0x400ccf-0x400cd4)}" t="0x4007c0" d=""/>
+    </P>
+    <P i="65" n="monte_carlo_barrier_option._omp_fn.0" l="0" v="{[0x400cdb-0x400cdc)}">
+      <S i="66" l="0" v="{[0x400cdb-0x400d8c) [0x400f14-0x400f71)}"/>
+      <L i="67" l="0" f="[openacc_monte_carlo_barrier_option]" v="{[0x400d8c-0x400d8d)}">
+        <S i="68" l="0" v="{[0x400d8c-0x400daa) [0x400de6-0x400deb) [0x400f07-0x400f14)}"/>
+        <L i="69" l="0" f="[openacc_monte_carlo_barrier_option]" v="{[0x400daa-0x400dab)}">
+          <S i="70" l="0" v="{[0x400daa-0x400dd0) [0x400dd8-0x400de6) [0x400deb-0x400e11) [0x400e16-0x400e30) [0x400efb-0x400f07)}"/>
+          <C i="71" l="0" v="{[0x400e11-0x400e16)}" t="0x400770" d=""/>
+          <L i="72" l="0" f="[openacc_monte_carlo_barrier_option]" v="{[0x400dd0-0x400dd1)}">
+            <S i="73" l="0" v="{[0x400dd0-0x400dd8) [0x400e30-0x400e39) [0x400e3e-0x400e4b) [0x400e50-0x400ec9) [0x400ece-0x400efb)}"/>
+            <C i="74" l="0" v="{[0x400e39-0x400e3e)}" t="0x400820" d=""/>
+            <C i="75" l="0" v="{[0x400e4b-0x400e50)}" t="0x400912" d=""/>
+            <C i="76" l="0" v="{[0x400ec9-0x400ece)}" t="0x400780" d=""/>
+          </L>
+        </L>
+      </L>
+    </P>
+    <P i="77" n="__libc_csu_init" l="0" v="{[0x400f80-0x400f81)}">
+      <S i="78" l="0" v="{[0x400f80-0x400fae) [0x400fb3-0x400fc0) [0x400fd6-0x400fe5)}"/>
+      <C i="79" l="0" v="{[0x400fae-0x400fb3)}" t="0x400738" d=""/>
+      <L i="80" l="0" f="[openacc_monte_carlo_barrier_option]" v="{[0x400fc0-0x400fc1)}">
+        <S i="81" l="0" v="{[0x400fc0-0x400fc9) [0x400fcd-0x400fd6)}"/>
+        <C i="82" l="0" v="{[0x400fc9-0x400fcd)}" d=""/>
+      </L>
+    </P>
+    <P i="83" n="__libc_csu_fini" l="0" v="{[0x400ff0-0x400ff1)}">
+      <S i="84" l="0" v="{[0x400ff0-0x400ff2)}"/>
+    </P>
+    <P i="85" n="_fini" l="0" v="{[0x400ff4-0x400ff5)}">
+      <S i="86" l="0" v="{[0x400ff4-0x400ffd)}"/>
+    </P>
+  </F>
+</LM>
+</HPCToolkitStructure>

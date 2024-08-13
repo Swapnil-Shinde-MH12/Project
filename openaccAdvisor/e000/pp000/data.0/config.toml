@@ -1,0 +1,16 @@
+Frequency = "1.35 GHz"
+EU_count = 96
+Memory_BW = "48 GB/s"
+PCIe_BW = "0 B/s"
+SLM_BW = 0
+SLM_size = 0
+L3_BW = "518.4 GB/s"
+L3_size = "3.75 MB"
+GTI_BW = "172.8 GB/s"
+LLC_BW = "172.8 GB/s"
+LLC_size = "12 MB"
+EU_per_subslice = 16
+Memory_subsystem = [ "L3", "GTI", "LLC", "DRAM",]
+device_name = "XeLP GT2"
+device_id = "gen12_tgl"
+platform = "gen12p1"

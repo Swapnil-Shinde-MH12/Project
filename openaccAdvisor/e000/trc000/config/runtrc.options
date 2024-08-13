@@ -1,0 +1,17 @@
+-r
+/home/user13/swapnil/OpenMpi/Project/openaccAdvisor/e000/trc000
+-quiet
+-cs-file
+/home/user13/swapnil/OpenMpi/Project/openaccAdvisor/e000/callstacks.def
+--cs-mode=count-loops,count-flops,stl-profiling,stack-stitching
+--count-flops
+--benchmarks=dram,mcdram,cpu_cache,flop_peak,int,
+--jit-profiling
+--offload-simulator
+--offload-simulator-page-size=4096
+--enable-cache-simulation
+--cache-config=6:64w:4k/1:480w:3840k/1:16w:12m
+--cachesim-sampling-factor=10
+--target-gpu=none
+--
+/home/user13/swapnil/OpenMpi/Project/openacc_monte_carlo_barrier_option
