@@ -4,7 +4,7 @@
 #include <time.h>  // Include the time header for timing functions
 #include <openacc.h>
 
-#define NUM_SIMULATIONS 1000000
+#define NUM_SIMULATIONS 10000000
 #define NUM_STEPS 100
 
 // Function to generate Gaussian random numbers
