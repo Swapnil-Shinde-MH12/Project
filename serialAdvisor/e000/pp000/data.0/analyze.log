@@ -1,0 +1,5 @@
+Info: Results will be stored at '/home/user13/swapnil/OpenMpi/Project/serialAdvisor/e000/pp000/data.0'. See interactive HTML report in '/home/user13/swapnil/OpenMpi/Project/serialAdvisor/e000/report'
+Info: Selected accelerator to analyze: Intel(R) Gen11 Integrated Graphics Accelerator 64EU.
+Info: Baseline Host: Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz.
+Info: Binary Name: 'monte_carlo_barrier_option'.
+Warning: Skip the unsupported instruction. Performance estimation may be inaccurate.

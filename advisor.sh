@@ -42,14 +42,13 @@ read project_dir
 echo "Compile Code"
 echo "-----------"
 
-echo "Enter the file name with extension (.c or .cpp or .cu): "
+echo "Enter the file name with extension (.c ): "
 read file_name
 
-
 if [ "${file_name##*.}" == "c" ]; then
-    echo "Compiling openACC code..."
+    echo "Compiling C code..."
     output_name="${file_name%.c}"
-    gcc -fopenacc  -o "$output_name" "$file_name" -lm
+    gcc -o "$output_name" "$file_name" -lm
     echo "Compilation successful! Output file: $output_name"
 
 else

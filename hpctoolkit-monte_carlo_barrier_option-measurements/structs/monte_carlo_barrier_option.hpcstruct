@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!DOCTYPE HPCToolkitStructure [
+<!-- ******************************************************************** -->
+<!-- HPCToolkit Structure DTD                                             -->
+<!-- Version 4.7                                                          -->
+<!-- ******************************************************************** -->
+
+<!ELEMENT HPCToolkitStructure (LM)*>
+<!ATTLIST HPCToolkitStructure
+	version CDATA #REQUIRED
+	i       CDATA #REQUIRED
+	n       CDATA #IMPLIED>
+  <!-- Load module: -->
+  <!--   (i)d: unique identifier for cross referencing -->
+  <!--   (n)ame -->
+  <!--   (l)ine range: "beg-end" (inclusive range) -->
+  <!--   (v)ma-range-set: "{[beg-end), [beg-end)...}" -->
+  <!--   (t)arget: target function address -->
+  <!--   (d)evice: device name -->
+  <!ELEMENT LM (F|P)*>
+  <!ATTLIST LM
+	i CDATA #REQUIRED
+	n CDATA #REQUIRED
+	v CDATA #IMPLIED>
+  <!-- File: -->
+  <!ELEMENT F (P|L|S)*>
+  <!ATTLIST F
+	i CDATA #REQUIRED
+	n CDATA #REQUIRED>
+  <!-- Procedure: ln=link name (if different than name) -->
+  <!ELEMENT P (P|A|L|S|C)*>
+  <!ATTLIST P
+	i  CDATA #REQUIRED
+	n  CDATA #REQUIRED
+	ln CDATA #IMPLIED
+	l  CDATA #IMPLIED
+	s  CDATA #IMPLIED
+	v  CDATA #IMPLIED>
+  <!-- Alien: (f)ilename -->
+  <!ELEMENT A (A|L|S|C)*>
+  <!ATTLIST A
+	i CDATA #REQUIRED
+	f CDATA #IMPLIED
+	n CDATA #IMPLIED
+	ln CDATA #IMPLIED
+	l CDATA #IMPLIED
+	v CDATA #IMPLIED>
+  <!-- Loop -->
+  <!ELEMENT L (A|L|S|C)*>
+  <!ATTLIST L
+	i CDATA #REQUIRED
+	l CDATA #REQUIRED
+	f CDATA #IMPLIED
+	v CDATA #IMPLIED>
+  <!-- Statement -->
+  <!ELEMENT S EMPTY>
+  <!ATTLIST S
+	i CDATA #REQUIRED
+	l CDATA #REQUIRED
+	v CDATA #IMPLIED>
+  <!-- Callsite (a special Statement) -->
+  <!ELEMENT C (C)*>
+  <!ATTLIST C
+	i CDATA #REQUIRED
+	l CDATA #REQUIRED
+	v CDATA #IMPLIED
+	t CDATA #IMPLIED
+	d CDATA #IMPLIED>
+]>
+<HPCToolkitStructure i="0" version="4.7" n="">
+<LM i="2" n="/home/user13/swapnil/OpenMpi/Project/monte_carlo_barrier_option" v="{}">
+  <F i="3" n="[monte_carlo_barrier_option]">
+    <P i="4" n="_init" l="0" v="{[0x4005f8-0x4005f9)}">
+      <S i="5" l="0" v="{[0x4005f8-0x400608) [0x40060d-0x400612)}"/>
+      <C i="6" l="0" v="{[0x400608-0x40060d)}" t="0x4006a0" d=""/>
+    </P>
+    <P i="7" n="fmax@plt" l="0" v="{[0x400630-0x400631)}">
+      <S i="8" l="0" v="{[0x400630-0x400640)}"/>
+    </P>
+    <P i="9" n="exp@plt" l="0" v="{[0x400640-0x400641)}">
+      <S i="10" l="0" v="{[0x400640-0x400650)}"/>
+    </P>
+    <P i="11" n="clock@plt" l="0" v="{[0x400650-0x400651)}">
+      <S i="12" l="0" v="{[0x400650-0x400660)}"/>
+    </P>
+    <P i="13" n="printf@plt" l="0" v="{[0x400660-0x400661)}">
+      <S i="14" l="0" v="{[0x400660-0x400670)}"/>
+    </P>
+    <P i="15" n="log@plt" l="0" v="{[0x400670-0x400671)}">
+      <S i="16" l="0" v="{[0x400670-0x400680)}"/>
+    </P>
+    <P i="17" n="cos@plt" l="0" v="{[0x400680-0x400681)}">
+      <S i="18" l="0" v="{[0x400680-0x400690)}"/>
+    </P>
+    <P i="19" n="__libc_start_main@plt" l="0" v="{[0x400690-0x400691)}">
+      <S i="20" l="0" v="{[0x400690-0x4006a0)}"/>
+    </P>
+    <P i="21" n="__gmon_start__@plt" l="0" v="{[0x4006a0-0x4006a1)}">
+      <S i="22" l="0" v="{[0x4006a0-0x4006b0)}"/>
+    </P>
+    <P i="23" n="sqrt@plt" l="0" v="{[0x4006b0-0x4006b1)}">
+      <S i="24" l="0" v="{[0x4006b0-0x4006c0)}"/>
+    </P>
+    <P i="25" n="rand@plt" l="0" v="{[0x4006c0-0x4006c1)}">
+      <S i="26" l="0" v="{[0x4006c0-0x4006d0)}"/>
+    </P>
+    <P i="27" n="_start" l="0" v="{[0x4006d0-0x4006d1)}">
+      <S i="28" l="0" v="{[0x4006d0-0x4006f4) [0x4006f9-0x400700)}"/>
+      <C i="29" l="0" v="{[0x4006f4-0x4006f9)}" t="0x400690" d=""/>
+    </P>
+    <P i="30" n="deregister_tm_clones" l="0" v="{[0x400700-0x400701)}">
+      <S i="31" l="0" v="{[0x400700-0x400730)}"/>
+    </P>
+    <P i="32" n="register_tm_clones" l="0" v="{[0x400730-0x400731)}">
+      <S i="33" l="0" v="{[0x400730-0x400770)}"/>
+    </P>
+    <P i="34" n="__do_global_dtors_aux" l="0" v="{[0x400770-0x400771)}">
+      <S i="35" l="0" v="{[0x400770-0x40077d) [0x400782-0x4007a0)}"/>
+      <C i="36" l="0" v="{[0x40077d-0x400782)}" t="0x400700" d=""/>
+    </P>
+    <P i="37" n="frame_dummy" l="0" v="{[0x4007a0-0x4007a1)}">
+      <S i="38" l="0" v="{[0x4007a0-0x4007a2)}"/>
+    </P>
+    <P i="39" n="rand_gaussian" l="0" v="{[0x4007a2-0x4007a3)}">
+      <S i="40" l="0" v="{[0x4007a2-0x4007aa) [0x4007af-0x4007c8) [0x4007cd-0x4007ef) [0x4007f4-0x40080a) [0x40080f-0x40082f) [0x400834-0x400845)}"/>
+      <C i="41" l="0" v="{[0x4007aa-0x4007af)}" t="0x4006c0" d=""/>
+      <C i="42" l="0" v="{[0x4007c8-0x4007cd)}" t="0x4006c0" d=""/>
+      <C i="43" l="0" v="{[0x4007ef-0x4007f4)}" t="0x400670" d=""/>
+      <C i="44" l="0" v="{[0x40080a-0x40080f)}" t="0x4006b0" d=""/>
+      <C i="45" l="0" v="{[0x40082f-0x400834)}" t="0x400680" d=""/>
+    </P>
+    <P i="46" n="monte_carlo_barrier_option" l="0" v="{[0x400845-0x400846)}">
+      <S i="47" l="0" v="{[0x400845-0x40089d) [0x4009a8-0x4009c8) [0x4009cd-0x4009ef)}"/>
+      <C i="48" l="0" v="{[0x4009c8-0x4009cd)}" t="0x400640" d=""/>
+      <L i="49" l="0" f="[monte_carlo_barrier_option]" v="{[0x40099c-0x40099d)}">
+        <S i="50" l="0" v="{[0x40089d-0x4008ba) [0x400944-0x40094d) [0x40095d-0x40097b) [0x400980-0x4009a8)}"/>
+        <C i="51" l="0" v="{[0x40097b-0x400980)}" t="0x400630" d=""/>
+        <L i="52" l="0" f="[monte_carlo_barrier_option]" v="{[0x400951-0x400952)}">
+          <S i="53" l="0" v="{[0x4008ba-0x4008c3) [0x4008c8-0x4008d2) [0x4008d7-0x400925) [0x40092a-0x400944) [0x40094d-0x40095d)}"/>
+          <C i="54" l="0" v="{[0x4008c3-0x4008c8)}" t="0x4006b0" d=""/>
+          <C i="55" l="0" v="{[0x4008d2-0x4008d7)}" t="0x4007a2" d=""/>
+          <C i="56" l="0" v="{[0x400925-0x40092a)}" t="0x400640" d=""/>
+        </L>
+      </L>
+    </P>
+    <P i="57" n="main" l="0" v="{[0x4009ef-0x4009f0)}">
+      <S i="58" l="0" v="{[0x4009ef-0x400a45) [0x400a4a-0x400a8e) [0x400a93-0x400a9c) [0x400aa1-0x400aea) [0x400aef-0x400b02) [0x400b07-0x400b0e)}"/>
+      <C i="59" l="0" v="{[0x400a45-0x400a4a)}" t="0x400650" d=""/>
+      <C i="60" l="0" v="{[0x400a8e-0x400a93)}" t="0x400845" d=""/>
+      <C i="61" l="0" v="{[0x400a9c-0x400aa1)}" t="0x400650" d=""/>
+      <C i="62" l="0" v="{[0x400aea-0x400aef)}" t="0x400660" d=""/>
+      <C i="63" l="0" v="{[0x400b02-0x400b07)}" t="0x400660" d=""/>
+    </P>
+    <P i="64" n="__libc_csu_init" l="0" v="{[0x400b10-0x400b11)}">
+      <S i="65" l="0" v="{[0x400b10-0x400b3e) [0x400b43-0x400b50) [0x400b66-0x400b75)}"/>
+      <C i="66" l="0" v="{[0x400b3e-0x400b43)}" t="0x4005f8" d=""/>
+      <L i="67" l="0" f="[monte_carlo_barrier_option]" v="{[0x400b50-0x400b51)}">
+        <S i="68" l="0" v="{[0x400b50-0x400b59) [0x400b5d-0x400b66)}"/>
+        <C i="69" l="0" v="{[0x400b59-0x400b5d)}" d=""/>
+      </L>
+    </P>
+    <P i="70" n="__libc_csu_fini" l="0" v="{[0x400b80-0x400b81)}">
+      <S i="71" l="0" v="{[0x400b80-0x400b82)}"/>
+    </P>
+    <P i="72" n="_fini" l="0" v="{[0x400b84-0x400b85)}">
+      <S i="73" l="0" v="{[0x400b84-0x400b8d)}"/>
+    </P>
+  </F>
+</LM>
+</HPCToolkitStructure>
